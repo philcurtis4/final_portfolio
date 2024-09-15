@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+$background-color: rgb(41, 41, 41);
+$primary-color: rgb(173, 23, 173);
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Quicksand", sans-serif;
+}
+
+html, body, #root {
+	height: 100%;
+	scroll-behavior: smooth;
+	background: $background-color;
+}
+
+a {
+	
+	text-decoration: none;
+}
+
+.nav-link {
+	text-decoration: none !important;
+}
+
+//Global Classes
+
+.row, .column {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justify-around {
+	justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.align-center {
+  align-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+//custom styles
+header{
+	// position: fixed;
+	// width: 100%;
+	padding: 8px 2%;
+	background: rgba(0, 0, 0, 0.411);
+	color: $primary-color;
+	padding-bottom: 15px;
+	h1 {
+		font-family: "Quicksand", cursive;
+		font-weight: 300;
+		margin-top: 0.5rem;
+	}
+	nav{
+		margin-top: 0.6rem;
+		margin-bottom: .6rem;
+		font-size: 1.5rem;
+		.nav-link {
+			margin-left: 10px;
+			color: $primary-color;
+			&.active, &:hover  {
+				text-decoration: underline !important;
+			}
+		}
+	}
+}
+
+//Landing 
+
+.landing{
+	background: $background-color;
+	color: #eee;
+	height: 40rem;
+}
+
+.greeting{ 
+	margin-top: 15rem;
+	margin-left: 12rem;
+
+	h2{
+		font-weight: 300;
+		font-size: 4rem;
+		color: $primary-color;
+	}
+
+	h3{
+		font-weight: 300;
+		font-size: 2.5rem;
+	}
+
+	h4{
+		margin-top: 2rem;
+		color: $primary-color;
+		font-size: 10rem;
+	}
+}
+
+img{
+	margin: 3rem 13rem 0 0;
+	width: 30%;
+	height: 80%;
+	object-fit: cover;
+	border-radius: 30px;
+	border: 2px solid $primary-color;
+	box-shadow: 0px 0px 50px rgba($primary-color, 0.6);
+}
+
+//About Styles
+
+#about{
+	background: $background-color;
+	color: #eee;
+	height: 30rem;
+	padding: 0 3rem;
+
+	h2{
+		font-size: 2.5rem;
+		font-weight: 300;
+		color: $primary-color;
+	}
+
+	p{
+		font-size: 1.5rem;
+	}
+}
+
+//Skills
+
+.skill-img{
+	border: none;
+	box-shadow: none;
+	max-height: 100%;
+	max-width: 100%;
+	width: 10%;
+	height: 20%;
+	background-size: contain;
+
+}
+
+//Projects 
+
+.projects {
+	background: $background-color;
+	font-weight: 300;
+	padding: 0 2rem;
+
+	h2{
+		font-weight: 300;
+		font-size: 2.5rem;
+		color: $primary-color;
+	}
+}
+
+.work {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	
+	gap: 15px;
+	color: #fff;
+	margin: 35px 0;
+	align-items: center;
+
+	.technologies {
+		color: $primary-color;
+	}
+	.content{
+		width: 50%;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+	
+	p {
+		margin: 8px 0;
+		color: #eee;
+		font-size: 1.5rem;
+	}
+	h4{
+		font-size: 3rem;
+		font-weight: 300;
+		text-decoration: none !important;
+		color: #eee;
+	}
+
+	.work-item {
+		color:#fff;
+		padding: 15px;
+		background-size: cover;
+		height: 20rem;
+		width: 45rem;
+		border: 3px solid $primary-color;
+		border-radius: 3px;
+		box-shadow: 0px 0px 50px rgba($primary-color, 0.6);
+		
+		&:hover {
+			opacity: .7;
+		}
+	}
+	
+}
+
+//Contact form styles
+.contact-section {
+  width: 100%;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .8rem 1rem;
+	background: $background-color;
+	color: #eee;
+}
+
+.contact-intro > * + * {
+  margin-top: 1rem;
+}
+
+.contact-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 300;
+	color: $primary-color;
+	
+}
+
+.contact-description {
+  color: rgb(107 114 128);
+}
+
+.form-group-container {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.form-input::placeholder,
+.form-textarea:focus-visible {
+  color: #6b7280;
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+  outline: 2px solid $primary-color;
+  outline-offset: 2px;
+}
+
+.form-textarea {
+  min-height: 120px;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 1.2rem;
+  background-color: $primary-color;
+  color: #fff;
+  padding: 13px 5px;
+  border-radius: 0.375rem;
+	font-size: 1.1rem;
+}

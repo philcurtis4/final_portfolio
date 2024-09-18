@@ -6,6 +6,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Skill from './pages/Skills'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
 			<Skill />
 			<Projects />
 			<Contact />
+			<Footer />
 
     </>
   )

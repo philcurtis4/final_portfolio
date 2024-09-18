@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 $background-color: rgb(41, 41, 41);
-$primary-color: rgb(173, 23, 173);
+$primary-color: #ad17ad;
 
 
 * {
@@ -70,6 +70,7 @@ header{
 	background: rgba(0, 0, 0, 0.411);
 	color: $primary-color;
 	padding-bottom: 15px;
+	align-items: center;
 	h1 {
 		font-family: "Quicksand", cursive;
 		font-weight: 300;
@@ -80,13 +81,25 @@ header{
 		margin-bottom: .6rem;
 		font-size: 1.5rem;
 		.nav-link {
-			margin-left: 10px;
+			margin-left: 15px;
 			color: $primary-color;
 			&.active, &:hover  {
 				text-decoration: underline !important;
 			}
 		}
 	}
+
+	.contact {
+		border-right: 2px solid $primary-color;
+		padding-right: .5rem;
+	}
+
+	.linkIcon{
+		fill: $primary-color;
+		margin-top: 6px;
+		margin-left: 1rem;
+	}
+	
 }
 
 //Landing 
@@ -134,7 +147,7 @@ img{
 #about{
 	background: $background-color;
 	color: #eee;
-	height: 30rem;
+	height: 25rem;
 	padding: 0 3rem;
 
 	h2{
@@ -149,7 +162,40 @@ img{
 }
 
 //Skills
+.skills{
+	padding: 2rem 2rem;
+	justify-content: center;
+	align-items: center;
+	color: #eee;
+	margin-bottom: 3rem;
+	h3{
+		font-size: 2.5rem;
+		font-weight: 300;
+		color: $primary-color;
+	}
+	.skills-grid{
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		justify-items: center;
+		
+		gap: 30px;
+		
+	}
+	h4{
+		display: flex;
+		background: $background-color;
+		border: 3px solid $primary-color;
+		box-shadow: 0px 0px 50px rgba($primary-color, 0.6);
+		border-radius: 6px;
+		height: 3rem;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1rem;
+		font-weight: 300;
+		margin-top: 1.5rem;
+	}
 
+}
 .skill-img{
 	border: none;
 	box-shadow: none;
@@ -161,13 +207,14 @@ img{
 
 }
 
+
 //Projects 
 
 .projects {
 	background: $background-color;
 	font-weight: 300;
 	padding: 0 2rem;
-
+	
 	h2{
 		font-weight: 300;
 		font-size: 2.5rem;
@@ -191,6 +238,20 @@ img{
 		width: 50%;
 		margin-left: 10px;
 		margin-top: 10px;
+
+		.deploy-btn {
+			background-color: $background-color;
+			padding: .5rem 1rem;
+			border-radius: 5px;
+			border: 2px solid $primary-color;
+			color: #eee;
+		}
+
+		.linkIcon {
+			fill: $primary-color;
+			margin-top: 15px;
+			height: 3rem;
+		}
 	}
 	
 	p {
@@ -231,6 +292,7 @@ img{
   padding: .8rem 1rem;
 	background: $background-color;
 	color: #eee;
+	
 }
 
 .contact-intro > * + * {
@@ -299,4 +361,16 @@ img{
   padding: 13px 5px;
   border-radius: 0.375rem;
 	font-size: 1.1rem;
+}
+
+//Footer
+
+.footer{
+	padding-top: 1.5rem;
+	font-size: 1.5rem;
+	height: 5rem;
+	color: #eee;
+	a{
+		color: $primary-color;
+	}
 }
